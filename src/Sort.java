@@ -49,19 +49,43 @@ public class Sort {
     public static void quickSort(int[] arr){
 
     }
+    /*
+    插入排序：取第n个数(n>=2)与前j个数相比，直到大于前面某一个数，将其插入在其后，
+    保证第n次循环保证arr[0]至arr[n]上的顺序正确，
+     */
+    public static void insertSort(int[] arr){
+        if(arr.length<2||arr==null){
+            return;
+        }
+        System.out.println("插入排序原数组"+Arrays.toString(arr));
+        for(int i=1;i<arr.length;i++){
+            for(int j=i-1;0<=j;j--){
+                if(arr[j]>arr[j+1]){
+                    swap(arr,j,j+1);
+                }
+            }
+        System.out.println("插入排序第"+i+"次遍历后数组"+Arrays.toString(arr));
+        }
+    }
 
     //交换数组中两个元素
     public static void swap(int[] arr,int i,int j){
         int c=arr[i];
         arr[i]=arr[j];
         arr[j]=c;
+        //前提是i不等于j，x^x=0,就会导致有一个值变为0
+        //arr[i]=arr[i]^arr[j]
+        //arr[j]=arr[i]^arr[j]
+        //arr[i]=arr[i]^arr[j]
         System.out.println(arr[j]+" 交换 "+arr[i]);
     }
 
     public static void main(String[] args){
-    int[] arr={6,5,4,3,2,1};
-    int[] arr1={6,5,4,3,2,1};
+    int[] arr={3,6,4,5,7,2,1};
+    int[] arr1={3,6,4,5,7,2,1};
+    int[] arr2={3,6,4,5,7,2,1};
     bubbleSort(arr);//冒泡排序
     selectionSort(arr1);//选择排序
+    insertSort(arr2);
     }
 }
