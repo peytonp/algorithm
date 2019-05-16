@@ -46,9 +46,6 @@ public class Sort {
         }
     }
 
-    public static void quickSort(int[] arr){
-
-    }
     /*
     插入排序：取第n个数(n>=2)与前j个数相比，直到大于前面某一个数，将其插入在其后，
     保证第n次循环保证arr[0]至arr[n]上的顺序正确，
@@ -66,6 +63,19 @@ public class Sort {
             }
         System.out.println("插入排序第"+i+"次遍历后数组"+Arrays.toString(arr));
         }
+    }
+    /*
+    快速排序：选取数组最后一个数X,将数组分为小于X,等于X，大于X的部分，依此类推。
+    1、当前数如果等于划分值，下标跳下一个
+    2、当前数如果小于划分值，当前数与小区的下一个数交换，小区向右扩一个位置，下标跳下一个
+    3、当前数如果大于划分值，当前数与大区的前一个数交换，大区向左扩一个位置，下标不动
+     */
+    public static void quickSort(int[] arr){
+
+    }
+
+    public static void Sort(int[] arr){
+
     }
 
     //交换数组中两个元素
