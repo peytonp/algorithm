@@ -45,6 +45,7 @@ class Solution {
         return null;
     }
 
+    //test
     public static void main(String[] args) {
         Solution solution = new Solution();
         int[] ints = solution.twoSum(new int[]{3, 2, 4}, 6);
